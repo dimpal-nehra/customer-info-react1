@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* background-color: #282c34; */
+}
+
+.outer-box{
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 3px solid rgb(255, 217, 0);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.header{
+  display: flex;
+  color: #0400ff;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box{
+  margin-top: 18px;
+}
+
+label{
+  font-size: 15px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card-box{
+  margin: 20px;
+  border: 1px solid rgb(255, 217, 0);
+  padding: 30px;
+  border-radius: 3px;
+  overflow: auto;
+  cursor: pointer;
+}
+
+.id{
+  font-size: 25px;
+  text-align: center;
+  color: #33ff00;
+}
+
+.name{
+  font-size: 15px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.loc{
+  font-size: 15px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.edit-delete{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+
+.hr-text{
+  border-top: 1px solid #999;
+}
+
+.sec{
+  text-align: center;
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 50px;
+}
