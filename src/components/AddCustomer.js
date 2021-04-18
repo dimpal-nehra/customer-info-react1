@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const AddCustomer = (props)=>{
 
     const [name,setName] = useState('')
     const [loc,setLoc] = useState('')
+
+    useEffect(()=>{
+        if(props.inEditState){
+            console.log("in edit state")
+            setName(props.cusById.customerName)
+            setLoc(props.cusById.customerLocation)
+        }
+    },[props.inEditState])
 
     const onFormSubmitted = (e)=>{
         e.preventDefault()
@@ -11,7 +19,9 @@ const AddCustomer = (props)=>{
             alert("Enter the Details in the form!!")
             return
         }
-        props.addCustomer({customerName:name,customerLocation :loc})
+        const isEdit = (props.inEditState) ? true : false; 
+        const customer = (props.inEditState) ? {id : props.cusById.id,customerName:name,customerLocation :loc} : {customerName:name,customerLocation :loc};
+        props.addCustomer(customer,isEdit)
         setName('')
         setLoc('')
     }
@@ -31,7 +41,9 @@ const AddCustomer = (props)=>{
                         value={loc} onChange={(e)=> setLoc(e.target.value)}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Add Customer</button>
+                <button type="submit" className={(props.inEditState) ? "btn btn-warning" :"btn btn-primary"}>
+                    {(props.inEditState) ? "Edit Customer" : "Add Customer"}
+                </button>
             </form>
         </div>
     )

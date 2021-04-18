@@ -1,0 +1,20 @@
+{
+    "customers": [
+      {
+        "id": 101,
+        "customerName": "Customer 1 - edited",
+        "customerLocation": "Location 1"
+      },
+      {
+        "id": 102,
+        "customerName": "Customer 2",
+        "customerLocation": "Location 2"
+      },
+      {
+        "id": 103,
+        "customerName": "Customer 3",
+        "customerLocation": "Location 3"
+      }
+    ]
+  }
+  

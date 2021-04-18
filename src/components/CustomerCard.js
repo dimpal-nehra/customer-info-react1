@@ -9,9 +9,11 @@ const CustomerCard = (props)=>{
             <p className = "loc">Customer Location : { props.customer.customerLocation }</p>
             <div className='edit-delete'>
                 <AiFillDelete style = {{ color:'#ff00bf', cursor:'pointer'}} 
-                    onClick={()=> props.deleteCus(props.customer.customerId)} 
+                    onClick={()=> props.deleteCus(props.customer.id)}
+                    />
+                    <FaEdit style = {{ color:'#007bff', cursor:'pointer'}} 
+                        onClick={()=> props.editButtonClicked(props.customer.id)} 
                 />
-                <FaEdit style = {{ color:'#ff00bf', cursor:'pointer'}} />
             </div>
         </div>
     )

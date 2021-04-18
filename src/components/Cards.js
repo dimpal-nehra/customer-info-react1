@@ -7,7 +7,12 @@ const Cards = (props)=>{
             <hr className="hr-text"/>
             <div class="flex-container">
                 {props.customers.map((customer,index) => (
-                    <CustomerCard customer = {customer} index={index} deleteCus = {props.deleteCus}></CustomerCard>
+                    <CustomerCard 
+                    customer = {customer} 
+                    index={index} 
+                    deleteCus = {props.deleteCus}
+                    editButtonClicked = {props.editButtonClicked}
+                />
                 ))}
             </div>
         </div>
